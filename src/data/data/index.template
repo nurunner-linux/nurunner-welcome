@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/index.css" rel="stylesheet" media="screen">
+        <link href="css/common.css" rel="stylesheet" media="screen">
+        <link href="css/font.css" rel="stylesheet" media="screen">
+    </head>
+    
+    <!-- Based on Manjaro Welcome designed by Joshua Strot -->
+    
+    <body class="backdrop">
+        <div id="header">
+            <img id="logo" src="img/logo-wide.png" />
+            <!--To display logo title as text replace logo-wide.png with logo.png and uncomment this line <div id="header-text">netrunner</div> -->
+            <div id="codename">
+                <span class="version">15.09</span>Rolling
+                <span class="arch32">32-bit</span><!-- Remove or comment if not necessary-->
+                <span class="arch64">64-bit</span><!-- Remove or comment if not necessary-->
+            </div>
+        </div><!-- End header -->
+        <div class="wrapper">
+            <div class="desc"><h2>Welcome to Netrunner Rolling.</h2></div>
+            <div class="desc">We, the Netrunner team, hope that you will enjoy using Netrunner Rolling Edition as much as we enjoy building it. The links below will help you get started with your new operating system. So enjoy the experience, and don't hesitate to send us your feedback.</div>
+            <div id="contents">
+                <span class="cont-container">
+                    <a class="cont-item" href="readme.html">
+                        <img class="cont-png" src="img/icons/readme.png"/>
+                        <div class="cont-text">Read Me</div>
+                    </a>
+                </span>
+                <span class="cont-container">
+                    <a class="cont-item" href="cmd://link?http://forums.netrunner.com">
+                        <img class="cont-png" src="img/icons/forums.png"/>
+                        <div class="cont-text">Forums</div>
+                    </a>
+                </span>
+                <span class="cont-container">
+                    <a class="cont-item" href="cmd://link?https://github.com/netrunner-rolling">
+                        <img class="cont-png" src="img/icons/getinvolved.png"/>
+                        <div class="cont-text">Get Involved</div>
+                    </a>
+                </span>
+            </div>
+        </div><!-- End wrapper -->
+        
+        <footer>
+            <div id="social-media">
+                <a href="cmd://link?https://www.facebook.com/netrunner.os" title="Facebook"><img class="social-media-img" src=img/social/facebook.png /></a>
+                <a href="cmd://link?https://twitter.com/netrunner_os" title="Twitter"><img class="social-media-img" src=img/social/twitter.png /></a>
+                <a href="cmd://link?https://plus.google.com/102351853205100197450" title="Google+"><img class="social-media-img" src="img/social/google.png" /></a>
+                <a href="cmd://link?https://www.youtube.com/channel/UCfeMCF-PihujEeV7-oFXXiA" title="Youtube"><img class="social-media-img" src=img/social/youtube.png /></a>
+            </div>
+            <a id="close" href="cmd://close">Close</a>
+            <div id="checkbox">
+                <a href="cmd://toggle-startup"><i id="autostart" class="icon-check"></i></a>
+            </div>
+        </footer>
+    </body>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/welcome.js"></script>
+</html>

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;System;
+StartupNotify=false
+Name=Netrunner Welcome
+Exec=netrunner-welcome
+Icon=gtk-info
+Comment=The Netrunner Welcome utility.
+Comment[pl]=Witamy w Netrunner Linux !
+Name[de_DE.UTF-8]=Netrunner Welcome
+Name[pl]=Witamy w Netrunner
