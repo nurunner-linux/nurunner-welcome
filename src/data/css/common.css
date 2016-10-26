@@ -142,7 +142,7 @@ footer {
     height: 36px;
     margin-right: 1px;
     line-height: 24px;
-    background-image: url("../img/checkbox.png");
+    background-image: url("../img/check.png");
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 0px;
@@ -153,7 +153,7 @@ footer {
     height: 36px;
     margin-right: 1px;
     line-height: 24px;
-    background-image:url("../img/checkbox-outline.png");
+    background-image:url("../img/uncheck.png");
     background-position: center;
     background-repeat: no-repeat;
     margin-top: 0px;
