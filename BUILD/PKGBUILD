@@ -5,40 +5,27 @@ pkgname=manjaro-welcome-dev
 _pkgname=manjaro-welcome
 pkgver=15.12
 pkgrel=3
-pkgdesc="The Manjaro Welcome utility provides a simple interface for accessing all the relevant information for a new user of Manjaro."
+pkgdesc="The Nurunner Welcome utility provides an easy way for the user to setup their Nurunner installation."
 arch=(any)
-url="https://github.com/manjaro/$_pkgname"
+url="https://github.com/nurunner-linux/$pkgname"
 license=('GPL')
-depends=('python-gobject' 'pywebkitgtk')
 makedepends=('git')
 options=(!emptydirs)
-conflicts=(manjaro-welcome)
-provides=(manjaro-welcome)
-_git=Yes
-_branch=development
-
-if [ "$_git" == "No" ]; then
-   ## Stable release
-   source=("$_pkgname-$pkgver.tar.gz::https://github.com/manjaro/$_pkgname/archive/$pkgver.tar.gz")
-   sha256sums=('7434fb2cbb3f6e551661c16233c0532f7b7baf2051810fe99e5792709e678ffe')
-else
-   ## Git release
-   source=(git+https://github.com/manjaro/$_pkgname.git#branch=$_branch)
-   sha256sums=('SKIP')
-fi
+source=(git+https://github.com/nurunner-linux/$pkgname.git)
+sha256sums=('SKIP')
 
 package() {
     if [ -e "$srcdir/$_pkgname-$pkgver" ]; then
-        cd "$srcdir/$_pkgname-$pkgver/src"
+        cd "$srcdir/$_pkgname-$pkgver/exec"
     else
-        cd "$srcdir/$_pkgname/src"
+        cd "$srcdir/$_pkgname/exec"
     fi
     
     mkdir -p "${pkgdir}/usr/share/${_pkgname}"
     mkdir -p "${pkgdir}/usr/share/icons/hicolor"
-    cp  -a data/* "${pkgdir}/usr/share/${_pkgname}"
-    touch "${pkgdir}/usr/share/${_pkgname}/index.html"
-    chmod 666 "${pkgdir}/usr/share/${_pkgname}/index.html"
+    ##cp  -a data/* "${pkgdir}/usr/share/${_pkgname}"
+    ##touch "${pkgdir}/usr/share/${_pkgname}/index.html"
+    ##chmod 666 "${pkgdir}/usr/share/${_pkgname}/index.html"
     install -D -m644 ${_pkgname}.desktop ${pkgdir}/etc/skel/.config/autostart/${_pkgname}.desktop
     install -D -m644 ${_pkgname}.desktop ${pkgdir}/usr/share/applications/${_pkgname}.desktop
     install -D -m755 "${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
