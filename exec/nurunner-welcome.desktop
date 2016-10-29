@@ -1,0 +1,12 @@
+[Desktop Entry]
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;System;
+StartupNotify=false
+Name=Nurunner Welcome
+Exec=nurunner-welcome
+Icon=gtk-info
+Comment=The Nurunner Welcome utility.
+Comment[pl]=Witamy w Nurunner Linux !
+Name[de_DE.UTF-8]=Nurunner Welcome
+Name[pl]=Witamy w Nurunner
