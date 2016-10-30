@@ -68,8 +68,23 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="autoFillBackground">
+           <bool>false</bool>
+          </property>
           <property name="text">
            <string>Get Started</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+          <property name="autoDefault">
+           <bool>false</bool>
+          </property>
+          <property name="default">
+           <bool>true</bool>
+          </property>
+          <property name="flat">
+           <bool>false</bool>
           </property>
          </widget>
         </item>
@@ -104,7 +119,7 @@
           <item>
            <widget class="QLabel" name="label_3">
             <property name="text">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;We need to make sure your mirror list is up to date. Otherwise, you'll download updates from the server at the top of the alphabet, rather than based on speed. This is important, because Africa starts with an A. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Let's update your mirror list and packages. Updating the mirror list will ensure that your update experience is as fast as possible. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -229,7 +244,7 @@
           <item row="0" column="0">
            <widget class="QCheckBox" name="chromeCheckbox">
             <property name="text">
-             <string>Google Chrome</string>
+             <string>Chromium Web Browser</string>
             </property>
            </widget>
           </item>
@@ -254,17 +269,43 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0">
-           <widget class="QCheckBox" name="sublimeCheckbox">
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="vscodeButton">
             <property name="text">
-             <string>Subline Text 3</string>
+             <string>Visual Studio Code</string>
             </property>
            </widget>
           </item>
-          <item row="1" column="0">
+          <item row="5" column="0">
            <widget class="QCheckBox" name="vivaldiCheckbox">
             <property name="text">
-             <string>Vivaldi Web Browser</string>
+             <string>Vivaldi Web Browser        </string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QCheckBox" name="vivaldiWidevineButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Widevine plugin</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="chromeWidevineButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Widevine plugin (for DRM video playback)</string>
             </property>
            </widget>
           </item>
@@ -346,7 +387,7 @@
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_2">
           <item>
-           <widget class="QPushButton" name="pushButton_3">
+           <widget class="QPushButton" name="readmeButton">
             <property name="text">
              <string>README</string>
             </property>

@@ -35,7 +35,11 @@ MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
+    QStringList command;
+    command.append("rm ~/.config/autostart/nurunner-welcome.desktop");
     m_unixCommand = new UnixCommand(this);
+    m_unixCommand->runCommandInTerminalAsNormalUser(command);
+
     if (!(m_unixCommand->isPackageInstalled("calamares"))){
         ui->setupUi(this);
     }else{
@@ -90,10 +94,10 @@ void MainWindow::on_installSoftwareButton_clicked()
     QString packagesToInstall = "";
 
     if (ui->chromeCheckbox->isChecked()){
-        packagesToInstall.append(" google-chrome");
+        packagesToInstall.append(" chromium");
     }
     if (ui->vivaldiCheckbox->isChecked()){
-        packagesToInstall.append(" vivaldi");
+        packagesToInstall.append(" vivaldi vivaldi-ffmpeg-codecs");
     }
     if (ui->dropboxCheckbox->isChecked()){
         packagesToInstall.append(" dropbox");
@@ -107,8 +111,14 @@ void MainWindow::on_installSoftwareButton_clicked()
     if (ui->spotifyCheckbox->isChecked()){
         packagesToInstall.append(" spotify");
     }
-    if (ui->sublimeCheckbox->isChecked()){
-        packagesToInstall.append(" sublime-text");
+    if (ui->chromeWidevineButton->isChecked()){
+        packagesToInstall.append(" chromium-widevine");
+    }
+    if (ui->vivaldiWidevineButton->isChecked()){
+        packagesToInstall.append(" vivaldi-widevine");
+    }
+    if (ui->vscodeButton->isChecked()){
+        packagesToInstall.append(" visual-studio-code");
     }
 
     if (packagesToInstall == ""){
@@ -124,7 +134,12 @@ void MainWindow::on_installSoftwareButton_clicked()
 
 void MainWindow::on_chromeCheckbox_clicked()
 {
-
+    if (ui->chromeCheckbox->isChecked()){
+        ui->chromeWidevineButton->setEnabled(true);
+    }else{
+        ui->chromeWidevineButton->setEnabled(false);
+        ui->chromeWidevineButton->setChecked(false);
+    }
 }
 
 void MainWindow::on_gotoIndex3_clicked()
@@ -150,4 +165,24 @@ void MainWindow::on_pushButton_2_clicked()
 void MainWindow::on_pushButton_3_clicked()
 {
 
+}
+
+void MainWindow::on_pushButton_pressed()
+{
+
+}
+
+void MainWindow::on_vivaldiCheckbox_clicked()
+{
+    if (ui->vivaldiCheckbox->isChecked()){
+        ui->vivaldiWidevineButton->setEnabled(true);
+    }else{
+        ui->vivaldiWidevineButton->setEnabled(false);
+        ui->vivaldiWidevineButton->setChecked(false);
+    }
+}
+
+void MainWindow::on_readmeButton_clicked()
+{
+    ui->tabWidget->setCurrentIndex(4);
 }

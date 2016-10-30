@@ -41,6 +41,12 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_pressed();
+
+    void on_vivaldiCheckbox_clicked();
+
+    void on_readmeButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     UnixCommand *m_unixCommand;
