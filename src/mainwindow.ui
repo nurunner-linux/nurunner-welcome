@@ -232,7 +232,7 @@
         <item>
          <widget class="QLabel" name="label_7">
           <property name="text">
-           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Here you can select any extra software you would like to install. All software listed here is packaged and updated by the Nurunner team. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Here you can select any extra software you would like to install. Software here (with the exception of Chromium &amp;amp; Wine) is packaged by the Nurunner team and is delivered via the nurunner-extra repository. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -245,6 +245,22 @@
            <widget class="QCheckBox" name="chromeCheckbox">
             <property name="text">
              <string>Chromium Web Browser</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QCheckBox" name="chromeWidevineButton">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Widevine plugin (for DRM video playback)</string>
             </property>
            </widget>
           </item>
@@ -263,16 +279,9 @@
            </widget>
           </item>
           <item row="4" column="0">
-           <widget class="QCheckBox" name="spotifyCheckbox">
+           <widget class="QCheckBox" name="skypeButton">
             <property name="text">
-             <string>Spotify</string>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="0">
-           <widget class="QCheckBox" name="vscodeButton">
-            <property name="text">
-             <string>Visual Studio Code</string>
+             <string>Skype for Linux</string>
             </property>
            </widget>
           </item>
@@ -293,19 +302,17 @@
             </property>
            </widget>
           </item>
-          <item row="0" column="1">
-           <widget class="QCheckBox" name="chromeWidevineButton">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
+          <item row="6" column="0">
+           <widget class="QCheckBox" name="vscodeButton">
             <property name="text">
-             <string>Widevine plugin (for DRM video playback)</string>
+             <string>Visual Studio Code</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QCheckBox" name="wineButton">
+            <property name="text">
+             <string>Wine</string>
             </property>
            </widget>
           </item>

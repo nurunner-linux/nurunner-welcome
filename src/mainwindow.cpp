@@ -94,7 +94,7 @@ void MainWindow::on_installSoftwareButton_clicked()
     QString packagesToInstall = "";
 
     if (ui->chromeCheckbox->isChecked()){
-        packagesToInstall.append(" chromium");
+        packagesToInstall.append(" chromium nurunner-settings-chromium");
     }
     if (ui->vivaldiCheckbox->isChecked()){
         packagesToInstall.append(" vivaldi vivaldi-ffmpeg-codecs");
@@ -102,14 +102,8 @@ void MainWindow::on_installSoftwareButton_clicked()
     if (ui->dropboxCheckbox->isChecked()){
         packagesToInstall.append(" dropbox");
     }
-    if (ui->dropboxCheckbox->isChecked()){
-        packagesToInstall.append(" dropbox");
-    }
     if (ui->megasyncCheckbox->isChecked()){
         packagesToInstall.append(" megasync");
-    }
-    if (ui->spotifyCheckbox->isChecked()){
-        packagesToInstall.append(" spotify");
     }
     if (ui->chromeWidevineButton->isChecked()){
         packagesToInstall.append(" chromium-widevine");
@@ -119,6 +113,9 @@ void MainWindow::on_installSoftwareButton_clicked()
     }
     if (ui->vscodeButton->isChecked()){
         packagesToInstall.append(" visual-studio-code");
+    }
+    if (ui->wineButton->isChecked()){
+        packagesToInstall.append(" wine wine-mono wine_gecko winetricks");
     }
 
     if (packagesToInstall == ""){
